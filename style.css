@@ -1,0 +1,304 @@
+body {
+    background-color: #1b1a1a;
+    color: rgb(81, 26, 126);
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: rgb(81, 26, 126);
+    background-image: linear-gradient(to top, rgb(31, 37, 46) 0%, rgb(81, 26, 126) 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__win {
+    font-size: 1.5rem;
+    background-color: rgb(81, 26, 126);
+    background-image: linear-gradient(to top, rgb(31, 37, 46) 0%, rgb(81, 26, 126) 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.1s ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 40%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #410b70;
+    background: -webkit-linear-gradient(to right, #8E2DE2, #410b70);
+    background: linear-gradient(to top, #8E2DE2, #410b70);
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scoreboard {
+    width: 200px;
+    height: 600px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#scoreboard h2 {
+    position: relative;
+    left: 10px;
+    background-color: rgb(81, 26, 126);
+    background-image: linear-gradient(to top, rgb(31, 37, 46) 0%, rgb(81, 26, 126) 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+#scoreboard h1 {
+    position: relative;
+    right: 5px;
+    background-color: rgb(81, 26, 126);
+    background-image: linear-gradient(to top, rgb(31, 37, 46) 0%, rgb(81, 26, 126) 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.turn {
+    background-color: green !important;
+    background-image: linear-gradient(to top, rgb(52, 97, 62) 0%, rgb(33, 163, 66) 100%) !important;
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+#tic {
+    position: relative;
+    left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 20px;
+    justify-self: end;
+    width: 600px;
+    height: 600px;
+    background-color: #131313;
+    border-radius: 20%;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid:nth-child(1),
+.grid:nth-child(2),
+.grid:nth-child(3) {
+    border-bottom: 3px solid rgb(81, 26, 126);
+}
+
+.grid:nth-child(7),
+.grid:nth-child(8),
+.grid:nth-child(9) {
+    border-top: 3px solid rgb(81, 26, 126);
+}
+
+.grid:nth-child(1),
+.grid:nth-child(4),
+.grid:nth-child(7) {
+    border-right: 3px solid rgb(81, 26, 126);
+}
+
+.grid:nth-child(3),
+.grid:nth-child(6),
+.grid:nth-child(9) {
+    border-left: 3px solid rgb(81, 26, 126);
+}
+
+.grid:hover {
+    background-color: rgb(36, 32, 32);
+}
+
+.grid:nth-child(1):hover {
+    border-top-left-radius: 60%;
+}
+
+.grid:nth-child(3):hover {
+    border-top-right-radius: 60%;
+}
+
+.grid:nth-child(7):hover {
+    border-bottom-left-radius: 60%;
+}
+
+.grid:nth-child(9):hover {
+    border-bottom-right-radius: 60%;
+}
+
+.grid:hover .circle::after {
+    background-color: rgb(36, 32, 32);
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    background-color: #131313;
+    border-radius: 50%;
+    display: block;
+    border: 20px solid black;
+    padding: 0;
+}
+
+.circle::before {
+    content: " ";
+    height: 140px;
+    width: 140px;
+    display: block;
+    position: relative;
+    top: -23px;
+    left: -23px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 3px solid rgb(81, 26, 126);
+
+}
+
+.circle::after {
+    content: " ";
+    height: 100px;
+    width: 100px;
+    display: block;
+    position: relative;
+    top: -149px;
+    left: -3px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 3px solid rgb(81, 26, 126);
+    background-color: #131313;
+}
+
+.cross {
+    display: block;
+    width: 150px;
+    height: 26px;
+    background-color: rgb(81, 26, 126);
+    margin-top: 20px;
+    padding: 0;
+}
+
+.cross::after {
+    content: " ";
+    width: 144px;
+    border: 3px solid rgb(81, 26, 126);
+    height: 20px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    transform: translateY(-17px) translateX(3px) rotate(90deg);
+
+}
+
+.cross {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+.cross::before {
+    content: " ";
+    width: 144px;
+    height: 20px;
+    display: block;
+    position: relative;
+    z-index: 2;
+    background-color: black;
+    transform: translateY(3px) translateX(3px);
+}
